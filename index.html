@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+.packageSection{
+    
+    padding-top: 53px;
+    padding-bottom: 112px;
+   
+    position: relative;
+    overflow: hidden;
+    
+   
+    
+}
+.packageSectionTitle{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    
+    color: #F4F4F4;
+    letter-spacing: -4px;
+    text-align: center;
+    margin: 0px;
+    z-index: 1;
+}
+.packageSectionTitleParagraph{
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    letter-spacing: -1.2px;
+    font-family:'Poppins', sans-serif;
+    z-index: 1;
+}
+.cleamButtonContener{
+    text-align: center;
+    z-index: 1;
+}
+.cleamButton{
+    color: #181A1C;
+    border-radius: 30px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #F4F4F4;
+    font-size: 20px;
+    letter-spacing: -1px;
+    padding: 15px 21px;
+    margin-bottom: 50px;
+   
+
+
+}
+.ticketPrice{
+    text-align: center;
+    margin-bottom: 36px;
+    z-index: 1;
+}
+.ticketPlace{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.ticketPlaceImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.buttonGrp{
+    text-align: center;
+    z-index: 1;
+    
+}
+.buttonn {
+            background-color: #6f6f70;
+            color: #181A1C;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid white;
+            font-weight: 500;
+            font-family: "Poppins", Sans-serif;
+            font-size: 20px;
+            border-radius: 30px;
+            margin: 10px;
+            letter-spacing: -1px;
+            padding: 14px 24px 14px 24px;
+            margin-right: 12px;
+          
+            
+        }
+        .buttonn:focus{
+            border: none;
+            outline: none;
+        }
+        .buttonn:hover{
+            opacity: 0.8;
+        }
+    
+        .filll {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #F4F4F4;
+            opacity: 0.5;
+           
+            transition: width 7s linear; /* Adjust the duration for a slower fill effect */
+        } 
+
+
+
+
+        @media only screen and (max-width: 1000px) {
+            /* Styles specific for screens less than or equal to 1000px */
+
+            .packageSectionTitle{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    
+    color: #F4F4F4;
+    letter-spacing: -1.75px;
+    text-align: center;
+    margin: 0px;
+    z-index: 1;
+}
+.packageSectionTitleParagraph{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    letter-spacing: -0.9px;
+    font-family:'Poppins', sans-serif;
+    z-index: 1;
+}
+.buttonContainer {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS devices */
+   
+}
+/* Hide the scrollbar */
+.buttonContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.buttonGrp {
+    display: inline-block; /* Ensure the buttons are displayed in a single line */
+}
+
+.buttonn {
+    display: inline-block;
+   background-color: #6f6f70;
+            color: #181A1C;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid white;
+            font-weight: 500;
+            font-family: "Poppins", Sans-serif;
+            font-size: 20px;
+            border-radius: 30px;
+            margin: 10px;
+            letter-spacing: -1px;
+            padding: 14px 24px 14px 24px;
+            margin-right: 12px;
+}
+
+
+
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div class="packageSection">
+        <h2 class="packageSectionTitle"></h2>
+       <p class="packageSectionTitleParagraph"></p>
+        <div class="cleamButtonContener">
+            <button class="cleamButton"></button>
+        </div>
+        <div class="ticketPrice">
+            <img  class="ticketPricePic" src="" alt="">
+        </div>
+        <div class="buttonContainer">
+            <div class="buttonGrp">
+                <button class="buttonn" id="autoFillButton1" onclick="buttonPress(1)" >Ticket from out 🌎</button>
+                <button class="buttonn" id="autoFillButton2" onclick="buttonPress(2)" >Ticket to 🌖</button>
+                <button class="buttonn" id="autoFillButton3" onclick="buttonPress(3)">Ticket to 🪐</button>
+                <button class="buttonn" id="autoFillButton4" onclick="buttonPress(4)">Ticket to ☀️</button>
+           </div>
+        </div>
+         <div class="ticketPlace">
+            <img  class="ticketPlaceImg" src="" alt="">
+        </div> 
+    </div>
+
+
+
+
+    <script>
+
+        //button click chnage content start
+        function buttonPress(buttonNumber) {
+            console.log("Button pressed:", buttonNumber);
+                    if (buttonNumber === 1) {
+                        document.querySelector('.packageSectionTitle').innerText = 'YOUR TICKET FROM OUT OF THIS EARTH';
+                        document.querySelector('.packageSectionTitleParagraph').innerText = 'Introducing our "Ticket to the Earth" package! We\'ll optimize/build Your website from scratch for Google, enhance its speed, and create a unique online presence for your brand, all for just €1699. Let\'s collaborate to enhance your brand\'s digital presence and make it sky rocket more than ever! Read more';
+                        document.querySelector('.cleamButton').innerText = 'Cleam Your ticket Form out of this🌎';
+                        document.querySelector('.ticketPricePic').src = 'https://galaxad.com/wp-content/uploads/2024/01/Group-703.png';
+                        document.querySelector('.ticketPlaceImg').src = 'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied2.png';
+                        
+                       
+                    } else if (buttonNumber === 2) {
+                        document.querySelector('.packageSectionTitle').innerText = 'YOUR TICKET TO THE MOON';
+                        document.querySelector('.packageSectionTitleParagraph').innerText = 'Introducing our "Ticket to the Moon" package! Get daily social media posts, a complete web redesign, and an organic, no ad cost marketing plan for brand awareness and sales. Our experts will keep your audience engaged, transform your website, and boost your online visibility, all for just 1.6k+ a month. Don\'t wait; secure your ticket today and watch your brand shine in the digital world! Read more';
+                        document.querySelector('.cleamButton').innerText = 'cleam your ticket to the🌖';
+                        document.querySelector('.ticketPricePic').src = 'https://galaxad.com/wp-content/uploads/2024/01/Group-701.png';
+                        document.querySelector('.ticketPlaceImg').src = 'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-3.png';
+                    } else if (buttonNumber === 3) {
+                        document.querySelector('.packageSectionTitle').innerText = 'YOUR TICKET TO SATURN';
+                        document.querySelector('.packageSectionTitleParagraph').innerText = 'Introducing our "ticket to the saturn" package! With a budget ranging from 2-6k a month, you\'ll have the opportunity to reach beyond the stars ! To keep your brand shining, we include daily posts and strategic Google Ads or Facebook Ads. While a minimum ad spend of 300 euros a month is required on your journey you also get a website redesign/optimize so your brand can become one of the biggest amoung the galaxy Read more';
+                        document.querySelector('.cleamButton').innerText = 'cleam your ticket to the🪐';
+                        document.querySelector('.ticketPricePic').src = 'https://galaxad.com/wp-content/uploads/2024/01/Group-697.png';
+                        document.querySelector('.ticketPlaceImg').src = 'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-4.png';
+                    } else if (buttonNumber === 4) {
+                        document.querySelector('.packageSectionTitle').innerText = 'YOUR TICKET TO THE SUN';
+                        document.querySelector('.packageSectionTitleParagraph').innerText = 'Introducing our "Ticket to the Sun" package! The biggest in the soular system with custom amount of daily social media posts, a complete web redesign, and optional App, strategic Google Ads, and facebook ads is this bundle is your ticket to be as well knowed as the sun. Our experts will reach every audience the light touches, and transform your ,googleranks, sales, and more for 8,000 a month. Don\'t wait; secure your ticket today and reach the end destantion for all busnisses ! Read more';
+                        document.querySelector('.cleamButton').innerText = 'cleam your ticket to the☀️';
+                        document.querySelector('.ticketPricePic').src = 'https://galaxad.com/wp-content/uploads/2024/01/Group-705-1.png';
+                        document.querySelector('.ticketPlaceImg').src = 'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-1.png';
+                    }
+                }
+        
+        //button click chnage content end
+
+
+
+
+
+        //button click chnage background color start
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".buttonn");
+
+    // Add event listener to handle button clicks
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Reset all buttons' background colors
+            buttons.forEach(function(btn) {
+                btn.style.backgroundColor = '#6f6f70';
+            });
+
+            // Set clicked button's background color to white
+            button.style.backgroundColor = 'white';
+            button.style.backgroundColor = '181A1C';
+           
+            // Set a timeout to revert the background color after a delay
+            setTimeout(function() {
+                button.style.backgroundColor = '#6f6f70';
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    });
+});
+//button click chnage background color end
+
+
+
+
+// chnage content and button animation start
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".buttonn");
+    var timeouts = [];
+    var contentChanges = [
+        { heading: "YOUR TICKET FROM OUT OF THIS EARTH",  paragraph: `"Introducing our "Ticket to the Earth" package! We\'ll optimize/build Your website from scratch for Google, enhance its speed, and create a unique online presence for your brand, all for just €1699. Let\'s collaborate to enhance your brand\'s digital presence and make it sky rocket more than ever! Read more" `,buttonText:'Cleam Your ticket Form out of this🌎',src: "https://galaxad.com/wp-content/uploads/2024/01/Group-703.png", src1:'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied2.png'},
+
+        { heading: "YOUR TICKET TO THE MOON",  paragraph: `Introducing our "Ticket to the Moon" package! Get daily social media posts, a complete web redesign, and an organic, no ad cost marketing plan for brand awareness and sales. Our experts will keep your audience engaged, transform your website, and boost your online visibility, all for just 1.6k+ a month. Don\'t wait; secure your ticket today and watch your brand shine in the digital world! Read more `,buttonText:'cleam your ticket to the🌖',src: "https://galaxad.com/wp-content/uploads/2024/01/Group-701.png", src1:'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-3.png'},
+
+        { heading: "YOUR TICKET TO SATURN",  paragraph: `Introducing our "ticket to the saturn" package! With a budget ranging from 2-6k a month, you\'ll have the opportunity to reach beyond the stars ! To keep your brand shining, we include daily posts and strategic Google Ads or Facebook Ads. While a minimum ad spend of 300 euros a month is required on your journey you also get a website redesign/optimize so your brand can become one of the biggest amoung the galaxy Read more `,buttonText:'cleam your ticket to the🪐',src: "https://galaxad.com/wp-content/uploads/2024/01/Group-697.png", src1:'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-4.png'},
+
+        { heading: "YOUR TICKET TO THE SUN",  paragraph: `Introducing our "Ticket to the Sun" package! The biggest in the soular system with custom amount of daily social media posts, a complete web redesign, and optional App, strategic Google Ads, and facebook ads is this bundle is your ticket to be as well knowed as the sun. Our experts will reach every audience the light touches, and transform your ,googleranks, sales, and more for 8,000 a month. Don\'t wait; secure your ticket today and reach the end destantion for all busnisses ! Read more `,buttonText:'cleam your ticket to the☀️',src: "https://galaxad.com/wp-content/uploads/2024/01/Group-705-1.png", src1:'https://galaxad.com/wp-content/uploads/2024/01/Tekengebied-1.png'},
+
+       
+    ];
+
+    // Function to start animations and content changes
+    function startAnimations() {
+        for (var i = 0; i < buttons.length; i++) {
+            animateButton(i);
+        }
+    }
+
+    // Function to animate button
+    function animateButton(index) {
+        var button = buttons[index];
+        var fill = document.createElement("span");
+        fill.classList.add("filll");
+        button.appendChild(fill);
+
+        // Trigger the fill animation after a delay
+        timeouts[index] = setTimeout(function() {
+            fill.style.width = "100%";
+           
+            // Change the color of the button to transparent after fill animation completes
+            setTimeout(function() {
+                fill.classList.remove("filll");
+            }, 7000); // 7000 milliseconds = 7 seconds (Same as the fill animation duration)
+
+            // Change content when button animation starts
+            changeContent(contentChanges[index].heading,contentChanges[index].paragraph,contentChanges[index].buttonText,contentChanges[index].src,contentChanges[index].src1);
+        }, index * 7000); // Delay for each butto
+    }
+
+    // Function to change content
+    function changeContent(heading, paragraph,buttonText,src,src1) {
+        document.querySelector('.packageSectionTitle').innerText =  heading;
+        document.querySelector('.packageSectionTitleParagraph').innerText = paragraph;
+        document.querySelector('.cleamButton').innerText = buttonText;
+        document.querySelector('.ticketPricePic').src = src;
+        document.querySelector('.ticketPlaceImg').src = src1;
+
+        
+    }
+
+    // Start animations initially
+    startAnimations();
+
+    // Repeat animations and content changes after completing the cycle
+    setInterval(function() {
+        // Remove existing fill spans before starting the animation again
+        buttons.forEach(function(button, index) {
+            var fill = button.querySelector('.filll');
+            if (fill) {
+                fill.remove();
+                clearTimeout(timeouts[index]);
+            }
+        });
+        // Restart animations and content changes
+        startAnimations();
+    }, buttons.length * 7500); // Repeat after all buttons finish
+});
+// chnage content and button animation end
+    </script>
+</body>
+</html>
